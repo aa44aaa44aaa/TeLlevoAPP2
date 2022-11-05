@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar color="dark" class="tellevo">
+        <ion-title>TeLlevoAPP</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid class="grid-1">
+        <ion-row class="row1"></ion-row>     
+        <ion-row class="row2"></ion-row>
+    </ion-grid>
+<ion-slide>
+    <div class="cont-login">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <h1 class="nombreInicio">Recupera tu acceso</h1>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <h6 class="texto1">Ingrese su correo electrico y le enviaremos el link de acceso especial</h6>
+                    <h4></h4>
+                    <ion-list class="colorbackground">
+                        <h4></h4>
+                        <ion-item>
+                            <ion-icon name="person" class="icon-login"></ion-icon>
+                            <ion-input name="user" type="text" required placeholder="Mail"></ion-input>
+                        </ion-item>
+                        <h4></h4>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-button (click)="presentAlert()"type="submit" fill="outline" expand="full">
+                        Restablecer
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-slide>
+</ion-content>
