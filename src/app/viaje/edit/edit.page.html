@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar color="dark">
+  <ion-title class="tellevo">Editar</ion-title>
+  <ion-buttons slot="start">
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+      <ion-grid class="grid-1">
+          <ion-row class="row1"></ion-row>     
+          <ion-row class="row2"></ion-row>
+      </ion-grid>
+  <ion-slide>
+    
+  <div class="cont-login">
+    
+      <ion-grid>
+          <ion-row>
+              <ion-col>
+                  <h1 class="nombreInicio"><ion-icon name="car-sport-outline"></ion-icon></h1>
+                  <h6 class="texto1">Comparte tu viaje!</h6>
+              </ion-col>
+          </ion-row>
+          
+          <div id="container">
+            <ion-grid>
+              <ion-card>
+                <ion-row>
+                  <ion-col>
+                      <h1 class="nombreInicio"><ion-icon name="car-sport-outline"></ion-icon></h1>
+                      <h6 class="texto1">Ingresa los datos de tu viaje</h6>
+                  </ion-col>
+              </ion-row>
+                <form (ngSubmit)="onSubmit()" [formGroup]="formData">
+                  <ion-card-content>
+                    <ion-row>
+                      <ion-col size="6">
+                        <ion-item>
+                          <ion-label position="floating">Nombre Conductor</ion-label>
+                          <ion-input formControlName="nombre" type="text" required value="{{ ListViajes.nombre }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="3">
+                        <ion-item>
+                          <ion-label position="floating">ID</ion-label>
+                          <ion-input formControlName="id" type="number" required value="{{ ListViajes.id }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="3">
+                        <ion-item>
+                          <ion-label position="floating">Capacidad</ion-label>
+                          <ion-input formControlName="capacidad" type="number" required value="{{ ListViajes.capacidad }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="3">
+                        <ion-item>
+                          <ion-label position="floating">Patente</ion-label>
+                          <ion-input formControlName="patente" type="text" required value="{{ ListViajes.patente }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="3">
+                        <ion-item>
+                          <ion-label position="floating">Precio</ion-label>
+                          <ion-input formControlName="precio" type="number" required value="{{ ListViajes.precio }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="3">
+                        <ion-item>
+                          <ion-label position="floating">Tipo Auto</ion-label>
+                          <ion-input formControlName="tipoAuto" type="text" required value="{{ ListViajes.tipoAuto }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="3">
+                        <ion-item>
+                          <ion-label position="floating">Tipo Pago</ion-label>
+                          <ion-input formControlName="tipoPago" type="text" required value="{{ ListViajes.tipoPago }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="6">
+                        <ion-item>
+                          <ion-label position="floating">Fecha</ion-label>
+                          <ion-input formControlName="hora" type="text" required value="{{ ListViajes.hora }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="6">
+                        <ion-item>
+                          <ion-label position="floating">Destino</ion-label>
+                          <ion-input formControlName="area" type="text" required value="{{ ListViajes.area }}"></ion-input>
+                        </ion-item>
+                      </ion-col>
+
+                      
+                    </ion-row>
+                    
+                    <ion-button type="submit" fill="outline" expand="full">Editar Viaje</ion-button>
+                  
+                  </ion-card-content>
+                </form>
+                
+              </ion-card>
+            </ion-grid>
+            
+          </div>
+        
+        
+      </ion-grid>
+    
+  </div>
+</ion-slide>
+</ion-content>

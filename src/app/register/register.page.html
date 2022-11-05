@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="dark">
+  <ion-title class="tellevo">Registro</ion-title>
+  <ion-buttons slot="start">
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+      <ion-grid class="grid-1">
+          <ion-row class="row1"></ion-row>     
+          <ion-row class="row2"></ion-row>
+      </ion-grid>
+  <ion-slide>
+    
+  <div class="cont-login">
+    
+      <ion-grid>
+          <ion-row>
+              <ion-col>
+                  <h1 class="nombreInicio"><ion-icon name="car-sport-outline"></ion-icon></h1>
+                  <h6 class="texto1">Haz tu cuenta y comienza a viajar</h6>
+              </ion-col>
+          </ion-row>
+          
+          <div id="container">
+            <ion-grid>
+              <ion-card>
+                <ion-row>
+                  <ion-col>
+                      <h1 class="nombreInicio"><ion-icon name="car-sport-outline"></ion-icon></h1>
+                      <h7 class="texto1">Registrate y comienza a viajar!</h7>
+                  </ion-col>
+              </ion-row>
+                <form (ngSubmit)="onSubmit()" [formGroup]="formData">
+                  <ion-card-content>
+                    <ion-row>
+                      <ion-col size="12">
+                        <ion-item>
+                          <ion-label position="floating">Usuario</ion-label>
+                          <ion-input formControlName="usuario" type="text" required></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="12">
+                        <ion-item>
+                          <ion-label position="floating">Contraseña</ion-label>
+                          <ion-input formControlName="password" type="password" required></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="12">
+                        <ion-item>
+                          <ion-label position="floating">Correo</ion-label>
+                          <ion-input formControlName="correo" type="email" required></ion-input>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col size="12">
+                        <ion-item>
+                          <ion-label position="floating">Nombre y Apellido</ion-label>
+                          <ion-input formControlName="nomap" type="text" required></ion-input>
+                        </ion-item>
+                      </ion-col>
+                
+                    </ion-row>
+                    
+                    <ion-button type="submit" fill="outline" expand="full">Registrar</ion-button>
+                  
+                  </ion-card-content>
+                </form>
+                
+              </ion-card>
+            </ion-grid>
+            
+          </div>
+        
+        
+      </ion-grid>
+    
+  </div>
+</ion-slide>
+</ion-content>

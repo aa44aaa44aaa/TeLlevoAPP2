@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title> SkeletonApp </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">SkeletonApp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Informacion del usuario</ion-card-title>
+        <ion-item>
+          <ion-label>
+            Nombre Usuario: {{username}}
+          </ion-label>
+        </ion-item>
+      </ion-card-header>
+      <form >
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Nivel Educacion</ion-label>
+            <ion-select>
+              <ion-select-option value="Estudiante">Estudiante</ion-select-option>
+              <ion-select-option value="Tecnico Profesional">Tecnico Profesional</ion-select-option>
+              <ion-select-option value="Profesional">Profesional</ion-select-option>
+              <ion-select-option value="Licenciado">Licenciado</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Fecha Nacimiento</ion-label>
+            <ion-input type="date" placeholder="Fecha"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-button size="small" color="primary" type="reset">Limpiar</ion-button>
+
+            <ion-button size="small" color="primary" (click)="mostrar()">Mostrar</ion-button>
+          </ion-item>
+        </ion-card-content>
+      </form>
+    </ion-card>
+
+  </div>
+</ion-content>

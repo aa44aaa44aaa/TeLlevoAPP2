@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="tellevo"><ion-icon name="location-outline"></ion-icon> Programa tu viaje</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!--<ion-buttons slot="end">
+      <ion-button color="danger" (click)="Eliminar()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <img src="{{ ListViajes.imagen }}" alt="">
+      <h4></h4>
+      <ion-item>
+      <ion-title style="text-align: center;" class="nombreInicio"> <b>{{ ListViajes.area }}</b> </ion-title>
+      </ion-item>
+
+      <ion-card-content style="text-align: center;"><ion-icon name="person-outline"></ion-icon> {{ ListViajes.capacidad }} asientos libres<br>
+      <ion-icon name="time-outline"></ion-icon> {{ ListViajes.hora }}</ion-card-content>
+
+      <ion-title style="text-align: center;" class="nombreInicio"> <h4>Sobre tu viaje</h4> </ion-title>
+      
+      <ion-card-content> <ion-icon name="cash-outline"></ion-icon><b>Precio:</b> {{ ListViajes.precio }} <br>
+        
+      <ion-icon name="car-outline"></ion-icon><b>Patente:</b> {{ ListViajes.patente }}<br>
+      <ion-icon name="card-outline"></ion-icon><b>Pago:</b> {{ ListViajes.tipoPago }}<br>
+      <ion-icon name="person-outline"></ion-icon><b>Conductor:</b> {{ ListViajes.nombre }}<br></ion-card-content>
+    <ion-button (click)="presentAlert2()" class="btnDetalle" expand="block" fill="clean" (click)="showModal()"><ion-icon name="navigate-outline"> </ion-icon>Viajar</ion-button>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top"> 
+      <ion-fab-button (click)="eliminar()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="modificar()">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
